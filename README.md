@@ -1,16 +1,14 @@
-# SportSynth - Real-time Sports Data Platform 🏏⚽🏀
+# CricSynth - Real-time Cricket Data Platform 🏏
 
-A comprehensive real-time sports data platform that fetches live scores from official APIs and delivers them through a modern web interface with WebSocket updates.
+A comprehensive real-time cricket data platform that fetches live scores from official APIs and delivers them through a modern web interface with WebSocket updates.
 
 ## 🌟 Features
 
 - **🏏 Live Cricket Data** - Real-time scores from CricAPI
-- **⚽ Football Matches** - Current match data and scores  
-- **🏀 Basketball Games** - Live NBA and international games
-- **🔄 Real-time Updates** - WebSocket connections for instant score updates
-- **📱 Responsive Design** - Modern React frontend with TypeScript
+- **🔄 Live UI Updates** - WebSocket connections for instant score and commentary updates
+- **📱 Smart Filtering** - UI filtering by match format (T20, ODI, Test)
 - **🗄️ PostgreSQL Database** - Efficient data storage with Drizzle ORM
-- **⚡ Auto-refresh** - Data updates every 5 seconds
+- **⚡ Autonomous Background Polling** - Server automatically fetches new data every minute
 
 ## 🚀 Quick Start
 
@@ -98,10 +96,6 @@ npm run real-data-continuous
 CRICAPI_KEY="your-api-key-here"
 ```
 
-### Other APIs
-- **TheSportsDB** (Football) - Free tier available
-- **NBA API** (Basketball) - Via RapidAPI
-
 ## 📊 Available Scripts
 
 ### Backend (sportz-websockets)
@@ -124,7 +118,7 @@ npm run preview          # Preview production build
 ## 🏗️ Project Structure
 
 ```
-SportSynth/
+CricSynth/
 ├── sportz-frontend/          # React frontend
 │   ├── src/
 │   │   ├── components/      # React components
@@ -149,22 +143,19 @@ SportSynth/
 
 ### Real-time Data Fetching
 - **CricAPI Integration**: Live cricket scores from official sources
-- **Fallback System**: Realistic mock data when APIs are unavailable
-- **Smart Scheduling**: Matches scheduled based on actual sports calendars
-- **Auto-sync**: Continuous data updates every 5 minutes
+- **Smart Scheduling**: Matches scheduled based on actual cricket calendars
+- **Auto-sync UpSerts**: Safe continuous data polling every 1 minute without destroying websocket connections
 
 ### WebSocket Features
-- **Live Score Updates**: Instant score changes pushed to clients
-- **Match Commentary**: Real-time commentary updates
+- **Live Score Updates**: Instant score changes pushed natively to connected clients via `score_update` hooks
+- **Match Commentary**: Real-time commentary updates via `commentary` hooks
 - **Connection Management**: Automatic reconnection and heartbeat
-- **Broadcast System**: Efficient multi-client updates
 
 ### Frontend Features
-- **Modern React**: Functional components with hooks
-- **TypeScript**: Full type safety
+- **Pill Filters**: Filter matches gracefully by T20, ODI, Test, or Other
+- **Intelligent Formatting**: Dates are natively rendered using accurate user-timezones
+- **Modern React**: Functional components with hooks and TypeScript
 - **Responsive Design**: Mobile-friendly interface
-- **Auto-refresh**: Data updates every 5 seconds
-- **WebSocket Integration**: Real-time updates without polling
 
 ## 🔧 Configuration
 
@@ -179,8 +170,6 @@ HOST=0.0.0.0
 
 # API Keys
 CRICAPI_KEY="your-cricapi-key"
-SPORTSDB_KEY="your-sportsdb-key"
-RAPIDAPI_KEY="your-rapidapi-key"
 
 # Arcjet (Security)
 ARCJET_KEY=""
@@ -204,7 +193,6 @@ ARCJET_ENV="development"
 
 ### APIs & Services
 - **CricAPI** - Live cricket data
-- **TheSportsDB** - Football data
 - **Arcjet** - Security middleware
 - **Site24x7** - Monitoring (optional)
 
@@ -240,7 +228,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - [JavaScript Mastery](https://www.youtube.com/@javascriptmastery/videos) - Tutorial inspiration
 - [CricAPI](https://www.cricapi.com/) - Cricket data provider
-- [TheSportsDB](https://www.thesportsdb.com/) - Football data provider
 - [Drizzle ORM](https://orm.drizzle.team/) - Excellent TypeScript ORM
 
 ## 📞 Support

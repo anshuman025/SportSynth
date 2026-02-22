@@ -226,7 +226,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- [JavaScript Mastery](https://www.youtube.com/@javascriptmastery/videos) - Tutorial inspiration
 - [CricAPI](https://www.cricapi.com/) - Cricket data provider
 - [Drizzle ORM](https://orm.drizzle.team/) - Excellent TypeScript ORM
 
@@ -235,7 +234,6 @@ This project is open source and available under the [MIT License](LICENSE).
 If you have any questions or issues, please:
 - Create an issue on GitHub
 - Check the existing documentation
-- Review the tutorial videos
 
 ---
 
